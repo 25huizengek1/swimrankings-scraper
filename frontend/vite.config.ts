@@ -10,13 +10,4 @@ export default defineConfig({
             hydratable: true
         },
     })],
-    appType: "spa",
-    build: {
-        ssr: true,
-        minify: true,
-        modulePreload: {
-            polyfill: true
-        },
-        manifest: false,
-    }
 })
