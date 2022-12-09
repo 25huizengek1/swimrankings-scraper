@@ -4,7 +4,6 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
-import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.*
 import io.ktor.server.plugins.autohead.*
@@ -21,16 +20,12 @@ import io.ktor.server.routing.*
 import kotlinx.serialization.json.Json
 import org.slf4j.event.Level
 
-val indexHtml = Dummy::class.java.getResource("/index.html")!!.readText()
-
 val json = Json {
     isLenient = true
     prettyPrint = true
     ignoreUnknownKeys = true
     encodeDefaults = true
 }
-
-object Dummy
 
 fun main() {
     embeddedServer(Netty, applicationEngineEnvironment {
@@ -84,13 +79,6 @@ fun main() {
                 }
             }
             routing {
-                get("/{...}") {
-                    call.respondText(indexHtml, ContentType.Text.Html)
-                }
-                static("/assets") {
-                    staticBasePackage = "static"
-                    resources("assets/.")
-                }
                 router()
             }
         }
