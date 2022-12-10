@@ -20,7 +20,7 @@ export const NavBar: Component = () => {
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <A href="/" class="flex items-center">
                     <img src={logo} class="h-6 mr-3 sm:h-9" alt="Logo"/>
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Swimrankings calculator</span>
+                    <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Swimrankings calculator</span>
                 </A>
                 <button ref={el => button = el} data-collapse-toggle="navbar-default" type="button"
                         class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
