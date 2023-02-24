@@ -21,9 +21,10 @@
     "solid-icons": "^1.0.4",
     "solid-js": "^1.6.2",
     "solid-start": "^0.2.0",
-    "undici": "^5.19.1"
+    "undici": "^5.20.0"
   },
   "engines": {
     "node": ">=16"
-  }
+  },
+  "license": "AGPL-3.0-or-later"
 }
