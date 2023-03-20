@@ -40,7 +40,7 @@ dependencies {
     implementation("org.apache.poi:poi-ooxml:$poiVersion")
 
     implementation("org.jsoup:jsoup:1.15.4")
-    implementation("ch.qos.logback:logback-classic:1.4.5")
+    implementation("ch.qos.logback:logback-classic:1.4.6")
     implementation("io.github.crackthecodeabhi:kreds:0.8.1")
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
