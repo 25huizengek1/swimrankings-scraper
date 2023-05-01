@@ -39,7 +39,7 @@ dependencies {
     implementation("org.apache.poi:poi:$poiVersion")
     implementation("org.apache.poi:poi-ooxml:$poiVersion")
 
-    implementation("org.jsoup:jsoup:1.15.4")
+    implementation("org.jsoup:jsoup:1.16.1")
     implementation("ch.qos.logback:logback-classic:1.4.7")
     implementation("io.github.crackthecodeabhi:kreds:0.8.1")
 
