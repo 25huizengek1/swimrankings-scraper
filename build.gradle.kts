@@ -4,7 +4,7 @@ plugins {
     val kotlinVersion = "1.8.22"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
-    id("io.ktor.plugin") version "2.3.1"
+    id("io.ktor.plugin") version "2.3.2"
     application
 }
 
