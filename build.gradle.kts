@@ -41,7 +41,7 @@ dependencies {
 
     implementation("org.jsoup:jsoup:1.16.1")
     implementation("ch.qos.logback:logback-classic:1.4.8")
-    implementation("io.github.crackthecodeabhi:kreds:0.8.1")
+    implementation("io.github.crackthecodeabhi:kreds:0.9.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
 }
