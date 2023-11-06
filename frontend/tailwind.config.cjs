@@ -1,8 +1,7 @@
-// noinspection JSValidateTypes
-/** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 // noinspection JSUnresolvedVariable
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
     theme: {

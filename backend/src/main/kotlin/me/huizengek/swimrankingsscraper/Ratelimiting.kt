@@ -3,8 +3,11 @@ package me.huizengek.swimrankingsscraper
 import io.github.crackthecodeabhi.kreds.connection.Endpoint
 import io.github.crackthecodeabhi.kreds.connection.KredsClientConfig
 import io.github.crackthecodeabhi.kreds.connection.newClient
+import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.plugins.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 import io.ktor.util.pipeline.*
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
@@ -13,7 +16,7 @@ private const val WINDOW_SIZE = 5000L
 private const val MAX_REQUESTS_PER_WINDOW = 3
 
 private const val SCRIPT =
-"""
+    """
 local currentKey = KEYS[1]
 local previousKey = KEYS[2]
 local tokens = tonumber(ARGV[1])
@@ -39,13 +42,13 @@ return tokens - newValue
 """
 
 private val redisClient by lazy {
-    runBlocking {
-        newClient(
-            endpoint = Endpoint.from(config.redisHost),
-            config = KredsClientConfig.Builder().apply {
-                soKeepAlive = true
-            }.build()
-        )
+    config.redisHost?.let { host ->
+        runBlocking {
+            newClient(
+                endpoint = Endpoint.from(host),
+                config = KredsClientConfig.Builder().apply { soKeepAlive = true }.build()
+            )
+        }
     }
 }
 
@@ -57,7 +60,7 @@ suspend fun PipelineContext<Unit, ApplicationCall>.ratelimit() = runCatching {
         val currentKey = "$ip:$currentWindow"
         val previousKey = "$ip:${currentWindow - WINDOW_SIZE}"
 
-        redisClient.use { client ->
+        redisClient?.use { client ->
             val remaining = client.eval(
                 script = SCRIPT,
                 keys = arrayOf(currentKey, previousKey),
@@ -68,3 +71,16 @@ suspend fun PipelineContext<Unit, ApplicationCall>.ratelimit() = runCatching {
         true
     }
 }.let { it.isFailure || it.getOrNull() == true }
+
+fun Route.ratelimit() = intercept(ApplicationCallPipeline.Setup) {
+    if (ratelimit()) proceedWith(subject) else {
+        call.respond(HttpStatusCode.TooManyRequests)
+        finish()
+    }
+}
+
+fun Route.ratelimit(block: Route.() -> Unit) {
+    val route = createChild()
+    route.ratelimit()
+    route.block()
+}

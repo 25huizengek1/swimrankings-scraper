@@ -1,21 +1,18 @@
-import { Component, mergeProps } from "solid-js"
+import { Component, mergeProps } from "solid-js";
+
+const types = {
+    "small": "h-2",
+    "medium": "h-5",
+    "large": "h-10"
+} as const;
 
 interface BlankSpaceProps {
-    type: "small" | "medium" | "large"
+    type: keyof typeof types;
 }
 
-export const Spacer : Component<BlankSpaceProps> = (props) => {
-    const actualProps = mergeProps({ type: "medium" }, props)
-    const className = () => {
-        switch (actualProps.type) {
-            case "small":
-                return "h-2"
-            case "medium":
-                return "h-5"
-            case "large":
-                return "h-10"
-        }
-    }
+export const Spacer: Component<BlankSpaceProps> = props => {
+    const actualProps = mergeProps({type: "medium"}, props);
+    const className = () => types[actualProps.type];
 
-    return <div class={className()} />
-}
+    return <div class={className()}/>;
+};

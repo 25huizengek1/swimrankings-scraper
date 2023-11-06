@@ -9,23 +9,13 @@ import io.ktor.server.plugins.*
 import io.ktor.server.plugins.autohead.*
 import io.ktor.server.plugins.callloging.*
 import io.ktor.server.plugins.compression.*
-import io.ktor.server.plugins.conditionalheaders.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.plugins.defaultheaders.*
-import io.ktor.server.plugins.partialcontent.*
 import io.ktor.server.plugins.statuspages.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import kotlinx.serialization.json.Json
 import org.slf4j.event.Level
-
-val json = Json {
-    isLenient = true
-    prettyPrint = true
-    ignoreUnknownKeys = true
-    encodeDefaults = true
-}
 
 fun main() {
     embeddedServer(Netty, applicationEngineEnvironment {
@@ -62,25 +52,20 @@ fun main() {
                 allowNonSimpleContentTypes = true
                 maxAgeInSeconds = 3600
             }
-            install(ConditionalHeaders)
-            install(PartialContent) {
-                maxRangeCount = 10
-            }
             install(StatusPages) {
                 exception<Throwable> { call, cause ->
                     runCatching {
                         when (cause) {
+                            is HttpEarlyReturnException -> {}
                             is ContentTransformationException, is MissingRequestParameterException, is IllegalArgumentException
-                            -> call.respond(HttpStatusCode.BadRequest)
-                            else ->
-                                call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
+                            -> call.respond(HttpStatusCode.BadRequest).also { cause.printStackTrace() }
+
+                            else -> call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
                         }
                     }
                 }
             }
-            routing {
-                router()
-            }
+            routing { router() }
         }
         watchPaths = listOf("classes")
     }).start(wait = true)

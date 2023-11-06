@@ -15,6 +15,8 @@ class SpreadSheetScope(name: String) {
         defaultColumnWidth *= 2
     }
 
+    val sheet get() = this
+
     fun put(x: Int, y: Int, value: String): XSSFCell = page.rowAt(y).cellAt(x).apply {
         setCellValue(value)
     }
@@ -33,6 +35,13 @@ class SpreadSheetScope(name: String) {
         spreadsheet.write(it)
         it.toByteArray()
     }
+
+    @JvmInline
+    value class XMarker(private val x: Int) {
+        context(SpreadSheetScope)
+        operator fun set(y: Int, value: String) = put(x, y, value)
+    }
+    operator fun get(x: Int) = XMarker(x)
 }
 
 private fun XSSFSheet.rowAt(index: Int) = runCatching { getRow(index) }.getOrNull() ?: createRow(index)

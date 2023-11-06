@@ -1,26 +1,27 @@
-import { Component, createSignal, For, onMount } from "solid-js"
-import { A } from "solid-start"
-import { useLocation } from "@solidjs/router"
+import { Component, createSignal, For, onMount } from "solid-js";
+import { A } from "solid-start";
+import { useLocation } from "@solidjs/router";
 
-import logo from "../logo.svg"
+import logo from "../logo.svg";
 
 export const NavBar: Component = () => {
-    const route = useLocation()
-    const [visible, setVisible] = createSignal(false)
-    let button: HTMLButtonElement
+    const route = useLocation();
+    const [visible, setVisible] = createSignal(false);
+    let button: HTMLButtonElement;
 
     onMount(() => {
         button.addEventListener("click", () => {
-            setVisible(!visible())
-        })
-    })
+            setVisible(!visible());
+        });
+    });
 
     return <div class="pb-14">
         <nav class="fixed w-screen top-0 border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-900">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <A href="/" class="flex items-center">
                     <img src={logo} class="h-6 mr-3 sm:h-9" alt="Logo"/>
-                    <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Swimrankings calculator</span>
+                    <span
+                        class="self-center text-xl font-semibold whitespace-nowrap text-white">Swimrankings calculator</span>
                 </A>
                 <button ref={el => button = el} data-collapse-toggle="navbar-default" type="button"
                         class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
@@ -35,7 +36,8 @@ export const NavBar: Component = () => {
                 </button>
                 <div class={(visible() ? "" : "hidden") + " w-full md:block md:w-auto"} id="navbar-default">
                     <ul class="flex flex-col mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-900">
-                        <For each={[["/", "Home"], ["/spreadsheet-builder", "Spreadsheet maken"], ["/about", "Over de maker"]]}>
+                        <For
+                            each={[["/", "Home"], ["/spreadsheet-builder", "Spreadsheet maken"], ["/about", "Over de maker"]]}>
                             {link =>
                                 <li class="pb-1">
                                     <A href={link[0]}
@@ -51,5 +53,5 @@ export const NavBar: Component = () => {
                 </div>
             </div>
         </nav>
-    </div>
-}
+    </div>;
+};

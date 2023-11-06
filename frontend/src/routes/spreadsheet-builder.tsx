@@ -1,16 +1,17 @@
-import { createSignal, Show } from "solid-js"
-import { Result, SearchForm } from "~/components/SearchForm"
-import { AthleteList } from "~/components/AthleteList"
-import { Spacer } from "~/components/Spacer"
-import { Button } from "~/components/Button"
-import { BASE_URL } from "~/constants"
+import { createSignal, Show } from "solid-js";
+import { Athlete } from "~/requests";
+import { BASE_URL } from "~/constants";
+import { SearchForm } from "~/components/SearchForm";
+import { Spacer } from "~/components/Spacer";
+import { Button } from "~/components/Button";
+import { AthleteList } from "~/components/AthleteList";
 
 export default function SpreadsheetBuilder() {
-    const [athletes, setAthletes] = createSignal<Result[]>([])
+    const [athletes, setAthletes] = createSignal<Athlete[]>([]);
 
-    function downloadExcel() {
-        if (athletes().length < 1) return
-        location.href = BASE_URL + "records/excelbatch/" + athletes().map(a => a.id).join("/")
+    const download = () => {
+        if (athletes().length < 1) return;
+        location.href = `${BASE_URL}records/excelbatch/${athletes().map(a => a.id).join("/")}`;
     }
 
     return <main class="text-white container mx-auto text-center py-5 px-2">
@@ -23,11 +24,8 @@ export default function SpreadsheetBuilder() {
             <AthleteList athletes={athletes()} setAthletes={setAthletes}/>
         </Show>
         <Spacer type="small" />
-        <Button content={"Download Excel-bestand"} onClick={downloadExcel} isSubmit={false}/>
+        <Button content={"Download Excel-bestand"} onClick={download} isSubmit={false}/>
         <Spacer type="large"/>
-        <SearchForm onClick={(athlete, clear) => {
-            setAthletes([...athletes(), athlete])
-            clear()
-        }}/>
+        <SearchForm onClick={athlete => setAthletes([...athletes(), athlete])}/>
     </main>
 }

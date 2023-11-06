@@ -2,7 +2,6 @@ package me.huizengek.swimrankingsscraper
 
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.Serializable
-import kotlin.time.Duration
 
 val countries = mapOf(
     -1 to "Wereldwijd",
@@ -238,10 +237,10 @@ data class SearchResults(
 @Serializable
 data class Athlete(
     val id: Int,
-    val name: String,
-    val birthdate: String,
-    val country: String,
-    val club: String
+    val name: String?,
+    val birthdate: String?,
+    val country: String?,
+    val club: String?
 )
 
 @Serializable
@@ -273,8 +272,7 @@ data class RecordResult(
     val id: Int,
     val rawValue: String,
     val link: String,
-    @Serializable(with = DurationSerializer::class)
-    val time: Duration
+    val time: DurationAsMillis
 )
 
 @Serializable
@@ -285,6 +283,7 @@ data class Match(
 )
 
 @Serializable
+@Suppress("unused")
 enum class Gender(val id: Int) {
     UNSPECIFIED(-1),
     MAN(1),

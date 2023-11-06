@@ -1,13 +1,7 @@
-import solid from "solid-start/vite"
-import { defineConfig } from "vite"
+import solid from "solid-start/vite";
+import { defineConfig } from "vite";
 
+// noinspection JSUnusedGlobalSymbols
 export default defineConfig({
-    plugins: [solid({
-        ssr: true,
-        hot: true,
-        dev: true,
-        solid: {
-            hydratable: true
-        },
-    })],
-})
+    plugins: [solid()],
+});

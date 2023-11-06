@@ -1,11 +1,5 @@
-import { Spacer } from "~/components/Spacer"
-import {
-    FaBrandsDiscord,
-    FaBrandsGithub,
-    FaBrandsMastodon,
-    FaBrandsReddit,
-    FaBrandsSnapchatSquare
-} from "solid-icons/fa"
+import { Spacer } from "~/components/Spacer";
+import { FaBrandsDiscord, FaBrandsGithub, FaBrandsReddit } from "solid-icons/fa";
 
 export default function About() {
     return <main class="text-white container max-w-screen-sm mx-auto text-center py-5 px-2">
@@ -24,14 +18,7 @@ export default function About() {
         <ul>
             <li>
                 <FaBrandsDiscord class="inline"/>
-                <div class="pl-2 inline-block font-bold text-sm">Huizengek#6623</div>
-            </li>
-            <li>
-                <FaBrandsMastodon class="inline"/>
-                <div class="pl-2 inline-block font-bold text-sm">
-                    <a class="underline decoration-2"
-                       href="https://octodon.social/@huizengek">@huizengek@octodon.social</a>
-                </div>
+                <div class="pl-2 inline-block font-bold text-sm">@huizengek</div>
             </li>
             <li>
                 <FaBrandsReddit class="inline"/>
@@ -44,10 +31,6 @@ export default function About() {
                 <div class="pl-2 inline-block font-bold text-sm">
                     <a class="underline decoration-2" href="https://github.com/25huizengek1">25huizengek1</a>
                 </div>
-            </li>
-            <li>
-                <FaBrandsSnapchatSquare class="inline"/>
-                <div class="pl-2 inline-block font-bold text-sm">nee stop ajb nie :)</div>
             </li>
         </ul>
         <Spacer type={"large"}/>
@@ -82,5 +65,5 @@ export default function About() {
             bijvoorbeeld als je wifi-verbinding niet via Nederland, Duitsland of België loopt. De rest van de wereld heb
             ik namelijk verbannen, dit voornamelijk uit veiligheidsoverwegingen. Als dit jou overkomt, neem dan contact
             op, dan maak ik graag een uitzondering voor jou.</p>
-    </main>
+    </main>;
 }
