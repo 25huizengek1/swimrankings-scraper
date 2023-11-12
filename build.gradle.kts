@@ -6,7 +6,7 @@ plugins {
 
 allprojects {
     group = "me.huizengek.swimrankingsscraper"
-    version = "1.0.0"
+    version = "1.0.1"
 
     repositories {
         mavenCentral()
