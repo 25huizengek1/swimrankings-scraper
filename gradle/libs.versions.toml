@@ -2,7 +2,7 @@
 kotlin = "1.9.21"
 jvm = "17"
 
-ktor = "2.3.6"
+ktor = "2.3.7"
 poi = "5.2.5"
 
 [plugins]
