@@ -13,13 +13,16 @@ dependencies:
     version: 0.12.0(solid-js@1.8.14)
   '@solidjs/start':
     specifier: ^0.5.4
-    version: 0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.1.1)
+    version: 0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@4.5.2)
   solid-icons:
     specifier: ^1.1.0
     version: 1.1.0(solid-js@1.8.14)
   solid-js:
     specifier: ^1.8.14
     version: 1.8.14
+  vite:
+    specifier: ^4.5.2
+    version: 4.5.2(@types/node@20.11.17)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -837,6 +840,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     bundledDependencies:
       - napi-wasm
 
@@ -846,6 +850,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     bundledDependencies:
       - napi-wasm
 
@@ -1198,7 +1203,7 @@ packages:
     dependencies:
       solid-js: 1.8.14
 
-  /@solidjs/start@0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.1.1):
+  /@solidjs/start@0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@4.5.2):
     resolution: {integrity: sha512-et6fu8GPRlzPz1nE0jJrB4QWEqKNzCMh62+FbmnZjOHA0eUldy47Aniki5RO6288eX5Oj4S6BWnvYcu1/iWkMw==}
     dependencies:
       '@vinxi/plugin-directives': 0.2.0(vinxi@0.2.1)
@@ -1213,8 +1218,8 @@ packages:
       shikiji: 0.9.19
       source-map-js: 1.0.2
       terracotta: 1.0.5(solid-js@1.8.14)
-      vite-plugin-inspect: 0.7.42(vite@5.1.1)
-      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.1.1)
+      vite-plugin-inspect: 0.7.42(vite@4.5.2)
+      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@4.5.2)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@testing-library/jest-dom'
@@ -3022,6 +3027,9 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+
   /nitropack@2.8.1:
     resolution: {integrity: sha512-pODv2kEEzZSDQR+1UMXbGyNgMedUDq/qUomtiAnQKQvLy52VGlecXO1xDfH3i0kP1yKEcKTnWsx1TAF5gHM7xQ==}
     engines: {node: ^16.11.0 || >=17.0.0}
@@ -4318,7 +4326,7 @@ packages:
       - rollup
       - supports-color
 
-  /vite-plugin-inspect@0.7.42(vite@5.1.1):
+  /vite-plugin-inspect@0.7.42(vite@4.5.2):
     resolution: {integrity: sha512-JCyX86wr3siQc+p9Kd0t8VkFHAJag0RaQVIpdFGSv5FEaePEVB6+V/RGtz2dQkkGSXQzRWrPs4cU3dRKg32bXw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -4336,7 +4344,7 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.1.1(@types/node@20.11.17)
+      vite: 4.5.2(@types/node@20.11.17)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -4363,7 +4371,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@5.1.1):
+  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@4.5.2):
     resolution: {integrity: sha512-RC4hj+lbvljw57BbMGDApvEOPEh14lwrr/GeXRLNQLcR1qnOdzOwwTSFy13Gj/6FNIZpBEl0bWPU+VYFawrqUw==}
     peerDependencies:
       '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
@@ -4379,8 +4387,8 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.8.14
       solid-refresh: 0.6.3(solid-js@1.8.14)
-      vite: 5.1.1(@types/node@20.11.17)
-      vitefu: 0.2.5(vite@5.1.1)
+      vite: 4.5.2(@types/node@20.11.17)
+      vitefu: 0.2.5(vite@4.5.2)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4420,12 +4428,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vite@5.1.1(@types/node@20.11.17):
-    resolution: {integrity: sha512-wclpAgY3F1tR7t9LL5CcHC41YPkQIpKUGeIuT8MdNwNZr6OqOTLs7JX5vIHAtzqLWXts0T+GDrh9pN2arneKqg==}
-    engines: {node: ^18.0.0 || >=20.0.0}
+  /vite@4.5.2(@types/node@20.11.17):
+    resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
+      '@types/node': '>= 14'
       less: '*'
       lightningcss: ^1.21.0
       sass: '*'
@@ -4449,9 +4457,9 @@ packages:
         optional: true
     dependencies:
       '@types/node': 20.11.17
-      esbuild: 0.19.12
+      esbuild: 0.18.20
       postcss: 8.4.35
-      rollup: 4.10.0
+      rollup: 3.29.4
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
@@ -4466,7 +4474,7 @@ packages:
     dependencies:
       vite: 4.5.0(@types/node@20.11.17)
 
-  /vitefu@0.2.5(vite@5.1.1):
+  /vitefu@0.2.5(vite@4.5.2):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -4474,7 +4482,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.1.1(@types/node@20.11.17)
+      vite: 4.5.2(@types/node@20.11.17)
     dev: false
 
   /webidl-conversions@3.0.1:
