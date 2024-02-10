@@ -1,10 +1,9 @@
-import { useNavigate, useParams } from "@solidjs/router";
+import { A, useNavigate, useParams } from "@solidjs/router";
 import { createResource, createSignal, For, Show, Suspense } from "solid-js";
 import { getAthlete } from "~/requests";
 import { BASE_URL } from "~/constants";
 import { FaSolidLeftLong } from "solid-icons/fa";
 import { Button } from "~/components/Button";
-import { A } from "solid-start";
 import { Spacer } from "~/components/Spacer";
 import { Spinner } from "~/components/Spinner";
 
