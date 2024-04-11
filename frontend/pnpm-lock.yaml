@@ -13,7 +13,7 @@ dependencies:
     version: 0.12.0(solid-js@1.8.14)
   '@solidjs/start':
     specifier: ^0.5.4
-    version: 0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.7)
+    version: 0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.8)
   solid-icons:
     specifier: ^1.1.0
     version: 1.1.0(solid-js@1.8.14)
@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.8.14
     version: 1.8.14
   vite:
-    specifier: ^5.2.7
-    version: 5.2.7(@types/node@20.11.17)
+    specifier: ^5.2.8
+    version: 5.2.8(@types/node@20.11.17)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -45,7 +45,7 @@ devDependencies:
     version: 5.3.3
   vinxi:
     specifier: ^0.2.1
-    version: 0.2.1(@types/node@20.11.17)(preact@10.20.1)
+    version: 0.2.1(@types/node@20.11.17)(preact@10.20.2)
 
 packages:
 
@@ -928,7 +928,7 @@ packages:
       npmlog: 5.0.1
       rimraf: 3.0.2
       semver: 7.6.0
-      tar: 6.2.0
+      tar: 6.2.1
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -1117,7 +1117,7 @@ packages:
   /@polka/url@1.0.0-next.24:
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
 
-  /@preact/preset-vite@2.8.1(@babel/core@7.23.9)(preact@10.20.1)(vite@4.5.0):
+  /@preact/preset-vite@2.8.1(@babel/core@7.23.9)(preact@10.20.2)(vite@4.5.0):
     resolution: {integrity: sha512-a9KV4opdj17X2gOFuGup0aE+sXYABX/tJi/QDptOrleX4FlnoZgDWvz45tHOdVfrZX+3uvVsIYPHxRsTerkDNA==}
     peerDependencies:
       '@babel/core': 7.x
@@ -1126,7 +1126,7 @@ packages:
       '@babel/core': 7.23.9
       '@babel/plugin-transform-react-jsx': 7.23.4(@babel/core@7.23.9)
       '@babel/plugin-transform-react-jsx-development': 7.22.5(@babel/core@7.23.9)
-      '@prefresh/vite': 2.4.5(preact@10.20.1)(vite@4.5.0)
+      '@prefresh/vite': 2.4.5(preact@10.20.2)(vite@4.5.0)
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.23.9)
       debug: 4.3.4
@@ -1142,17 +1142,17 @@ packages:
   /@prefresh/babel-plugin@0.5.1:
     resolution: {integrity: sha512-uG3jGEAysxWoyG3XkYfjYHgaySFrSsaEb4GagLzYaxlydbuREtaX+FTxuIidp241RaLl85XoHg9Ej6E4+V1pcg==}
 
-  /@prefresh/core@1.5.2(preact@10.20.1):
+  /@prefresh/core@1.5.2(preact@10.20.2):
     resolution: {integrity: sha512-A/08vkaM1FogrCII5PZKCrygxSsc11obExBScm3JF1CryK2uDS3ZXeni7FeKCx1nYdUkj4UcJxzPzc1WliMzZA==}
     peerDependencies:
       preact: ^10.0.0
     dependencies:
-      preact: 10.20.1
+      preact: 10.20.2
 
   /@prefresh/utils@1.2.0:
     resolution: {integrity: sha512-KtC/fZw+oqtwOLUFM9UtiitB0JsVX0zLKNyRTA332sqREqSALIIQQxdUCS1P3xR/jT1e2e8/5rwH6gdcMLEmsQ==}
 
-  /@prefresh/vite@2.4.5(preact@10.20.1)(vite@4.5.0):
+  /@prefresh/vite@2.4.5(preact@10.20.2)(vite@4.5.0):
     resolution: {integrity: sha512-iForDVJ2M8gQYnm5pHumvTEJjGGc7YNYC0GVKnHFL+GvFfKHfH9Rpq67nUAzNbjuLEpqEOUuQVQajMazWu2ZNQ==}
     peerDependencies:
       preact: ^10.4.0
@@ -1160,10 +1160,10 @@ packages:
     dependencies:
       '@babel/core': 7.23.9
       '@prefresh/babel-plugin': 0.5.1
-      '@prefresh/core': 1.5.2(preact@10.20.1)
+      '@prefresh/core': 1.5.2(preact@10.20.2)
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
-      preact: 10.20.1
+      preact: 10.20.2
       vite: 4.5.0(@types/node@20.11.17)
     transitivePeerDependencies:
       - supports-color
@@ -1424,7 +1424,7 @@ packages:
     dependencies:
       solid-js: 1.8.14
 
-  /@solidjs/start@0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.7):
+  /@solidjs/start@0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.8):
     resolution: {integrity: sha512-et6fu8GPRlzPz1nE0jJrB4QWEqKNzCMh62+FbmnZjOHA0eUldy47Aniki5RO6288eX5Oj4S6BWnvYcu1/iWkMw==}
     dependencies:
       '@vinxi/plugin-directives': 0.2.0(vinxi@0.2.1)
@@ -1439,8 +1439,8 @@ packages:
       shikiji: 0.9.19
       source-map-js: 1.0.2
       terracotta: 1.0.5(solid-js@1.8.14)
-      vite-plugin-inspect: 0.7.42(vite@5.2.7)
-      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.2.7)
+      vite-plugin-inspect: 0.7.42(vite@5.2.8)
+      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.2.8)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@testing-library/jest-dom'
@@ -1538,10 +1538,10 @@ packages:
       - encoding
       - supports-color
 
-  /@vinxi/devtools@0.2.0(@babel/core@7.23.9)(preact@10.20.1)(vite@4.5.0):
+  /@vinxi/devtools@0.2.0(@babel/core@7.23.9)(preact@10.20.2)(vite@4.5.0):
     resolution: {integrity: sha512-LpQp5zbiBhV4eo2w6AiJFtpZZj4LaRBOnzggIPTeSJYvgrxRMAqe/34Har3vVo+b7sPOjxFbE1zHZhLzaAcidw==}
     dependencies:
-      '@preact/preset-vite': 2.8.1(@babel/core@7.23.9)(preact@10.20.1)(vite@4.5.0)
+      '@preact/preset-vite': 2.8.1(@babel/core@7.23.9)(preact@10.20.2)(vite@4.5.0)
       '@solidjs/router': 0.8.4(solid-js@1.8.14)
       birpc: 0.2.15
       solid-js: 1.8.14
@@ -1595,7 +1595,7 @@ packages:
       magicast: 0.2.11
       recast: 0.23.4
       tslib: 2.6.2
-      vinxi: 0.2.1(@types/node@20.11.17)(preact@10.20.1)
+      vinxi: 0.2.1(@types/node@20.11.17)(preact@10.20.2)
     dev: false
 
   /@vinxi/server-components@0.2.0(vinxi@0.2.1):
@@ -1610,7 +1610,7 @@ packages:
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.4
-      vinxi: 0.2.1(@types/node@20.11.17)(preact@10.20.1)
+      vinxi: 0.2.1(@types/node@20.11.17)(preact@10.20.2)
     dev: false
 
   /@vinxi/server-functions@0.2.1(vinxi@0.2.1):
@@ -1625,7 +1625,7 @@ packages:
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.4
-      vinxi: 0.2.1(@types/node@20.11.17)(preact@10.20.1)
+      vinxi: 0.2.1(@types/node@20.11.17)(preact@10.20.2)
     dev: false
 
   /abbrev@1.1.1:
@@ -2635,7 +2635,7 @@ packages:
       nypm: 0.3.6
       ohash: 1.1.3
       pathe: 1.1.2
-      tar: 6.2.0
+      tar: 6.2.1
 
   /glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -3693,8 +3693,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.2.0
 
-  /preact@10.20.1:
-    resolution: {integrity: sha512-JIFjgFg9B2qnOoGiYMVBtrcFxHqn+dNXbq76bVmcaHYJFYR4lW67AOcXgAYQQTDYXDOg/kTZrKPNCdRgJ2UJmw==}
+  /preact@10.20.2:
+    resolution: {integrity: sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==}
 
   /pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
@@ -4214,8 +4214,8 @@ packages:
       fast-fifo: 1.3.2
       streamx: 2.15.8
 
-  /tar@6.2.0:
-    resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
+  /tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
     dependencies:
       chownr: 2.0.0
@@ -4490,7 +4490,7 @@ packages:
   /validate-html-nesting@1.2.2:
     resolution: {integrity: sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg==}
 
-  /vinxi@0.2.1(@types/node@20.11.17)(preact@10.20.1):
+  /vinxi@0.2.1(@types/node@20.11.17)(preact@10.20.2):
     resolution: {integrity: sha512-zrgFO2XuKpdoW5VwlbieeQ0YhzMuuYCJyFWFyj41h9BnymHZ5dnKElALvFQn5JVzHhyrsdmlm8GU7tIuH786hw==}
     hasBin: true
     dependencies:
@@ -4500,7 +4500,7 @@ packages:
       '@types/micromatch': 4.0.6
       '@types/serve-static': 1.15.5
       '@types/ws': 8.5.10
-      '@vinxi/devtools': 0.2.0(@babel/core@7.23.9)(preact@10.20.1)(vite@4.5.0)
+      '@vinxi/devtools': 0.2.0(@babel/core@7.23.9)(preact@10.20.2)(vite@4.5.0)
       '@vinxi/listhen': 1.5.6
       boxen: 7.1.1
       c12: 1.7.0
@@ -4593,7 +4593,7 @@ packages:
       - rollup
       - supports-color
 
-  /vite-plugin-inspect@0.7.42(vite@5.2.7):
+  /vite-plugin-inspect@0.7.42(vite@5.2.8):
     resolution: {integrity: sha512-JCyX86wr3siQc+p9Kd0t8VkFHAJag0RaQVIpdFGSv5FEaePEVB6+V/RGtz2dQkkGSXQzRWrPs4cU3dRKg32bXw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -4611,7 +4611,7 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.2.7(@types/node@20.11.17)
+      vite: 5.2.8(@types/node@20.11.17)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -4638,7 +4638,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@5.2.7):
+  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@5.2.8):
     resolution: {integrity: sha512-RC4hj+lbvljw57BbMGDApvEOPEh14lwrr/GeXRLNQLcR1qnOdzOwwTSFy13Gj/6FNIZpBEl0bWPU+VYFawrqUw==}
     peerDependencies:
       '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
@@ -4654,8 +4654,8 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.8.14
       solid-refresh: 0.6.3(solid-js@1.8.14)
-      vite: 5.2.7(@types/node@20.11.17)
-      vitefu: 0.2.5(vite@5.2.7)
+      vite: 5.2.8(@types/node@20.11.17)
+      vitefu: 0.2.5(vite@5.2.8)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4695,8 +4695,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vite@5.2.7(@types/node@20.11.17):
-    resolution: {integrity: sha512-k14PWOKLI6pMaSzAuGtT+Cf0YmIx12z9YGon39onaJNy8DLBfBJrzg9FQEmkAM5lpHBZs9wksWAsyF/HkpEwJA==}
+  /vite@5.2.8(@types/node@20.11.17):
+    resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -4741,7 +4741,7 @@ packages:
     dependencies:
       vite: 4.5.0(@types/node@20.11.17)
 
-  /vitefu@0.2.5(vite@5.2.7):
+  /vitefu@0.2.5(vite@5.2.8):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -4749,7 +4749,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.2.7(@types/node@20.11.17)
+      vite: 5.2.8(@types/node@20.11.17)
     dev: false
 
   /webidl-conversions@3.0.1:
