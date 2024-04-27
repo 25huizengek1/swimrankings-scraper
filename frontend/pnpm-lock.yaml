@@ -13,7 +13,7 @@ dependencies:
     version: 0.12.0(solid-js@1.8.14)
   '@solidjs/start':
     specifier: ^0.5.4
-    version: 0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.8)
+    version: 0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.9)
   solid-icons:
     specifier: ^1.1.0
     version: 1.1.0(solid-js@1.8.14)
@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.8.14
     version: 1.8.14
   vite:
-    specifier: ^5.2.8
-    version: 5.2.8(@types/node@20.11.17)
+    specifier: ^5.2.9
+    version: 5.2.9(@types/node@20.11.17)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -1495,7 +1495,7 @@ packages:
     dependencies:
       solid-js: 1.8.14
 
-  /@solidjs/start@0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.8):
+  /@solidjs/start@0.5.4(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.2.9):
     resolution: {integrity: sha512-et6fu8GPRlzPz1nE0jJrB4QWEqKNzCMh62+FbmnZjOHA0eUldy47Aniki5RO6288eX5Oj4S6BWnvYcu1/iWkMw==}
     dependencies:
       '@vinxi/plugin-directives': 0.2.0(vinxi@0.2.1)
@@ -1510,8 +1510,8 @@ packages:
       shikiji: 0.9.19
       source-map-js: 1.0.2
       terracotta: 1.0.5(solid-js@1.8.14)
-      vite-plugin-inspect: 0.7.42(vite@5.2.8)
-      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.2.8)
+      vite-plugin-inspect: 0.7.42(vite@5.2.9)
+      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.2.9)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@testing-library/jest-dom'
@@ -5191,7 +5191,7 @@ packages:
       - rollup
       - supports-color
 
-  /vite-plugin-inspect@0.7.42(vite@5.2.8):
+  /vite-plugin-inspect@0.7.42(vite@5.2.9):
     resolution: {integrity: sha512-JCyX86wr3siQc+p9Kd0t8VkFHAJag0RaQVIpdFGSv5FEaePEVB6+V/RGtz2dQkkGSXQzRWrPs4cU3dRKg32bXw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5209,7 +5209,7 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.2.8(@types/node@20.11.17)
+      vite: 5.2.9(@types/node@20.11.17)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -5236,7 +5236,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@5.2.8):
+  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@5.2.9):
     resolution: {integrity: sha512-RC4hj+lbvljw57BbMGDApvEOPEh14lwrr/GeXRLNQLcR1qnOdzOwwTSFy13Gj/6FNIZpBEl0bWPU+VYFawrqUw==}
     peerDependencies:
       '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
@@ -5252,8 +5252,8 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.8.14
       solid-refresh: 0.6.3(solid-js@1.8.14)
-      vite: 5.2.8(@types/node@20.11.17)
-      vitefu: 0.2.5(vite@5.2.8)
+      vite: 5.2.9(@types/node@20.11.17)
+      vitefu: 0.2.5(vite@5.2.9)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5293,8 +5293,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vite@5.2.8(@types/node@20.11.17):
-    resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
+  /vite@5.2.9(@types/node@20.11.17):
+    resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -5339,7 +5339,7 @@ packages:
     dependencies:
       vite: 4.5.0(@types/node@20.11.17)
 
-  /vitefu@0.2.5(vite@5.2.8):
+  /vitefu@0.2.5(vite@5.2.9):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -5347,7 +5347,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.2.8(@types/node@20.11.17)
+      vite: 5.2.9(@types/node@20.11.17)
     dev: false
 
   /webidl-conversions@3.0.1:
