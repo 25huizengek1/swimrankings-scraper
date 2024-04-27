@@ -38,7 +38,7 @@ export const genders = {
 
 export type Gender = keyof typeof genders
 
-export async function search(firstName: string, lastName: String, gender: Gender, country: number): Promise<Result<Athlete[]> | null> {
+export async function search(firstName: string, lastName: string, gender: Gender, country: number): Promise<Result<Athlete[]> | null> {
     try {
         const res = await fetch(BASE_URL + "search", {
             method: "POST",
@@ -57,9 +57,10 @@ export async function search(firstName: string, lastName: String, gender: Gender
             result: [],
             isRatelimit: true
         };
-        const json = (await res.json() as any).results as any;
         return {
-            result: z.array(athleteValidator).parse(json),
+            result: z.object({
+                results: z.array(athleteValidator)
+            }).parse(await res.json()).results,
             isRatelimit: false
         };
     } catch (e) {
@@ -79,9 +80,8 @@ export async function getCountries(): Promise<Result<Map<number, string>> | null
             result: new Map(),
             isRatelimit: true
         };
-        const json = (await res.json()) as any;
         return {
-            result: asMap(z.record(z.coerce.number(), z.coerce.string()).parse(json)),
+            result: asMap(z.record(z.coerce.number(), z.coerce.string()).parse(await res.json())),
             isRatelimit: false
         };
     } catch (e) {
@@ -145,9 +145,8 @@ export async function getAthlete(id: string): Promise<Result<Records | null> | n
             result: null,
             isRatelimit: true
         };
-        const json = (await res.json()) as any;
         return {
-            result: recordsValidator.parse(json),
+            result: recordsValidator.parse(await res.json()),
             isRatelimit: false
         };
     } catch (e) {

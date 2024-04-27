@@ -12,7 +12,7 @@ export default function SpreadsheetBuilder() {
     const download = () => {
         if (athletes().length < 1) return;
         location.href = `${BASE_URL}records/excelbatch/${athletes().map(a => a.id).join("/")}`;
-    }
+    };
 
     return <main class="text-white container mx-auto text-center py-5 px-2">
         <h1 class="text-3xl font-extrabold font-sans">Spreadsheet maken</h1>
@@ -20,12 +20,12 @@ export default function SpreadsheetBuilder() {
             Excel-document</h1>
         <Spacer type="medium"/>
         <Show when={athletes().length > 0} keyed={true}
-              fallback={<div class="text-gray-400 font-semibold">Nog geen geselecteerde atleten...</div>}>
+            fallback={<div class="text-gray-400 font-semibold">Nog geen geselecteerde atleten...</div>}>
             <AthleteList athletes={athletes()} setAthletes={setAthletes}/>
         </Show>
         <Spacer type="small" />
         <Button content={"Download Excel-bestand"} onClick={download} isSubmit={false}/>
         <Spacer type="large"/>
         <SearchForm onClick={athlete => setAthletes([...athletes(), athlete])}/>
-    </main>
+    </main>;
 }

@@ -11,7 +11,7 @@ export default function About() {
             populair is geworden, ben ik bezig de boel uit te breiden!</h2>
         <Spacer type={"small"}/>
         <p class="text-sm">Voor problemen en suggesties: mail naar <a class="underline decoration-2"
-                                                                      href="mailto:25huizengek1@gmail.com">25huizengek1@gmail.com</a>
+            href="mailto:25huizengek1@gmail.com">25huizengek1@gmail.com</a>
         </p>
         <Spacer type={"medium"}/>
         <p class="text-md font-light">Je kunt me ook bereiken op één van de volgende platformen</p>
@@ -46,7 +46,7 @@ export default function About() {
         <p class="text-sm font-semibold">Tot nu toe verzamel ik géén persoonlijke data, helemaal niks. Als dit ooit
             verandert, zal ik daarvan alle gebruikers op de hoogte stellen, met een (inmiddels verplichte) cookie-box.
             Cloudflare daarentegen gebruikt voor veiligheidsdoeleinden wel wat gegevens, zie hiervoor hun website (<a
-                class="underline decoration-2" href="https://cloudflare.com/">cloudflare.com</a>)</p>
+            class="underline decoration-2" href="https://cloudflare.com/">cloudflare.com</a>)</p>
         <Spacer type={"large"}/>
         <h2 class="text-2xl font-extrabold">Ratelimits</h2>
         <Spacer type={"small"}/>

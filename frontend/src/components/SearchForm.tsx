@@ -49,16 +49,16 @@ export const SearchForm: Component<SearchFormProps> = props => {
         }}>
             <div class="grid grid-flow-col auto-cols-auto space-x-2">
                 <Input id={"first_name"} label={"Voornaam"} placeholder={"Gerrit"} value={firstName()}
-                       setValue={setFirstName} required={false}/>
+                    setValue={setFirstName} required={false}/>
                 <Input id={"last_name"} label={"Achternaam"} placeholder={"Strandstoel"} value={lastName()}
-                       setValue={setLastName} required={true}/>
+                    setValue={setLastName} required={true}/>
             </div>
             <Spacer type="small"/>
             <Select<number> id={"country"} label={"Land"} options={countries()} value={country} setValue={setCountry}/>
             <Spacer type="small"/>
             <Select<string> id={"gender"} label={"Geslacht"}
-                            options={new Map(Object.entries(genders).map(e => [e[0], e[1].displayName]))}
-                            value={gender} setValue={setGender}/>
+                options={new Map(Object.entries(genders).map(e => [e[0], e[1].displayName]))}
+                value={gender} setValue={setGender}/>
             <Spacer type="small"/>
             <Button content="Zoek" onClick={refetch} isSubmit={true}/>
             <Show when={isError()}>
@@ -82,31 +82,31 @@ export const SearchForm: Component<SearchFormProps> = props => {
             <div class="overflow-x-auto relative">
                 <table class="w-full text-sm text-left text-gray-400">
                     <thead class="text-xs uppercase bg-gray-700 text-gray-400">
-                    <tr>
-                        <th scope="col" class="py-3 px-6">Naam</th>
-                        <th scope="col" class="py-3 px-6">Land</th>
-                        <th scope="col" class="py-3 px-6">Club</th>
-                        <th scope="col" class="py-3 px-6">Geboortejaar</th>
-                        <th scope="col" class="w-min"/>
-                    </tr>
+                        <tr>
+                            <th scope="col" class="py-3 px-6">Naam</th>
+                            <th scope="col" class="py-3 px-6">Land</th>
+                            <th scope="col" class="py-3 px-6">Club</th>
+                            <th scope="col" class="py-3 px-6">Geboortejaar</th>
+                            <th scope="col" class="w-min"/>
+                        </tr>
                     </thead>
                     <tbody>
-                    <For each={results()!}>{(athlete) =>
-                        <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600"
-                            onClick={() => props.onClick(athlete)}>
-                            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap text-white">
-                                {athlete.name ?? "-"}
-                            </th>
-                            <td class="py-4 px-6">{athlete.country ?? "-"}</td>
-                            <td class="py-4 px-6">{athlete.club ?? "-"}</td>
-                            <td class="py-4 px-6">{athlete.birthdate ?? "-"}</td>
-                            <td class="w-min">
-                                <Button content={<FaSolidLink/>}
+                        <For each={results()!}>{(athlete) =>
+                            <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600"
+                                onClick={() => props.onClick(athlete)}>
+                                <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap text-white">
+                                    {athlete.name ?? "-"}
+                                </th>
+                                <td class="py-4 px-6">{athlete.country ?? "-"}</td>
+                                <td class="py-4 px-6">{athlete.club ?? "-"}</td>
+                                <td class="py-4 px-6">{athlete.birthdate ?? "-"}</td>
+                                <td class="w-min">
+                                    <Button content={<FaSolidLink/>}
                                         onClick={() => location.href = "https://www.swimrankings.net/index.php?page=athleteDetail&athleteId=" + athlete.id}
                                         isSubmit={false}/>
-                            </td>
-                        </tr>}
-                    </For>
+                                </td>
+                            </tr>}
+                        </For>
                     </tbody>
                 </table>
             </div>

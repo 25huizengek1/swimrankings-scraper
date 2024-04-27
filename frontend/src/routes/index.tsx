@@ -1,9 +1,9 @@
-import { Spacer } from "~/components/Spacer"
-import { useNavigate } from "@solidjs/router"
-import { SearchForm } from "~/components/SearchForm"
+import { Spacer } from "~/components/Spacer";
+import { useNavigate } from "@solidjs/router";
+import { SearchForm } from "~/components/SearchForm";
 
 export default function Home() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     return (
         <main class="text-white container mx-auto text-center py-5 px-2">
@@ -12,5 +12,5 @@ export default function Home() {
             <Spacer type="large"/>
             <SearchForm onClick={athlete => navigate("/athletes/" + athlete.id)} />
         </main>
-    )
+    );
 }

@@ -5,15 +5,20 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "NODE_ENV=production vinxi build",
-    "start": "NODE_ENV=production vinxi start"
+    "start": "NODE_ENV=production vinxi start",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/"
   },
   "type": "module",
   "devDependencies": {
+    "@eslint/js": "^9.1.1",
     "@types/node": "^20.11.17",
     "autoprefixer": "^10.4.17",
+    "eslint": "^9.1.1",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
+    "typescript-eslint": "^7.7.1",
     "vinxi": "^0.2.1"
   },
   "dependencies": {
