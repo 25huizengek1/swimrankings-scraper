@@ -3,7 +3,7 @@ kotlin = "2.0.0"
 jvm = "17"
 
 ktor = "2.3.11"
-poi = "5.2.5"
+poi = "5.3.0"
 
 [plugins]
 kotlin_jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
