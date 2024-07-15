@@ -31,7 +31,7 @@ ktor-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", versi
 poi = { group = "org.apache.poi", name = "poi", version.ref = "poi" }
 poi-xlsx = { group = "org.apache.poi", name = "poi-ooxml", version.ref = "poi" }
 
-jsoup = { group = "org.jsoup", name = "jsoup", version = "1.17.2" }
+jsoup = { group = "org.jsoup", name = "jsoup", version = "1.18.1" }
 logback = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.6" }
 redis = { group = "io.github.crackthecodeabhi", name = "kreds", version = "0.9.1" }
 
