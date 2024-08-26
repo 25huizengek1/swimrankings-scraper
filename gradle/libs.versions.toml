@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.0.0"
+kotlin = "2.0.20"
 jvm = "17"
 
 ktor = "2.3.11"
